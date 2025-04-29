@@ -1,0 +1,117 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net6.0-windows</TargetFramework>
+    <Nullable>disable</Nullable>
+    <UseWPF>true</UseWPF>
+    <ApplicationIcon>App.ico</ApplicationIcon>
+    <ApplicationManifest>app.manifest</ApplicationManifest>
+	<IncludeAllContentForSelfExtract>true</IncludeAllContentForSelfExtract>
+    <Platforms>x86</Platforms>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="App.ico" />
+    <None Remove="Assets\App.ico" />
+    <None Remove="Assets\App.png" />
+    <None Remove="Assets\barcode.png" />
+    <None Remove="Assets\exit.png" />
+    <None Remove="Assets\folder.png" />
+    <None Remove="Assets\grunt.png" />
+    <None Remove="Assets\help.png" />
+    <None Remove="Assets\play.png" />
+    <None Remove="Assets\remove.png" />
+    <None Remove="Assets\scale.png" />
+    <None Remove="Assets\setting.png" />
+    <None Remove="Assets\stop.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <COMReference Include="OPOSCONSTANTSLib">
+      <WrapperTool>tlbimp</WrapperTool>
+      <VersionMinor>0</VersionMinor>
+      <VersionMajor>1</VersionMajor>
+      <Guid>ccb99150-b81e-11d2-ab74-0040054c3719</Guid>
+      <Lcid>0</Lcid>
+      <Isolated>false</Isolated>
+      <EmbedInteropTypes>false</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="OposScale_CCO">
+      <WrapperTool>tlbimp</WrapperTool>
+      <VersionMinor>0</VersionMinor>
+      <VersionMajor>1</VersionMajor>
+      <Guid>ccb90170-b81e-11d2-ab74-0040054c3719</Guid>
+      <Lcid>0</Lcid>
+      <Isolated>false</Isolated>
+      <EmbedInteropTypes>false</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="OposScanner_CCO">
+      <WrapperTool>tlbimp</WrapperTool>
+      <VersionMinor>0</VersionMinor>
+      <VersionMajor>1</VersionMajor>
+      <Guid>ccb90180-b81e-11d2-ab74-0040054c3719</Guid>
+      <Lcid>0</Lcid>
+      <Isolated>false</Isolated>
+      <EmbedInteropTypes>false</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="ServiceOPOSLib">
+      <WrapperTool>tlbimp</WrapperTool>
+      <VersionMinor>0</VersionMinor>
+      <VersionMajor>1</VersionMajor>
+      <Guid>c4d9f365-bf8d-4656-9bee-41a62991050a</Guid>
+      <Lcid>0</Lcid>
+      <Isolated>false</Isolated>
+      <EmbedInteropTypes>false</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Hardcodet.NotifyIcon.Wpf" Version="2.0.1" />
+    <PackageReference Include="Syncfusion.Licensing" Version="27.2.5" />
+    <PackageReference Include="Syncfusion.SfBusyIndicator.WPF" Version="27.2.5" />
+    <PackageReference Include="Syncfusion.SfSkinManager.WPF" Version="27.2.5" />
+    <PackageReference Include="Syncfusion.Shared.WPF" Version="27.2.5" />
+    <PackageReference Include="Syncfusion.Themes.Office2019Black.WPF" Version="27.2.5" />
+    <PackageReference Include="Syncfusion.Themes.Office2019Black.WPF" Version="27.2.5" />
+    <PackageReference Include="Syncfusion.Themes.Office2019Black.WPF" Version="27.2.5" />
+    <PackageReference Include="Syncfusion.Themes.Office2019Black.WPF" Version="27.2.5" />
+    <PackageReference Include="Syncfusion.Themes.Office2019Black.WPF" Version="27.2.5" />
+    <PackageReference Include="Syncfusion.Themes.Office2019Black.WPF" Version="27.2.5" />
+    <PackageReference Include="Syncfusion.Tools.WPF" Version="27.2.5" />
+	<PackageReference Include="System.IO.Ports" Version="7.0.0" />
+    <Resource Include="App.ico" />
+    <Resource Include="Assets\App.ico" />
+    <Resource Include="Assets\App.png" />
+    <Resource Include="Assets\barcode.png" />
+    <Resource Include="Assets\folder.png" />
+	<Resource Include="Assets\grunt.png" />
+	<Resource Include="Assets\play.png" />
+	<Resource Include="Assets\remove.png" />
+	<Resource Include="Assets\scale.png" />
+	<Resource Include="Assets\setting.png" />
+	<Resource Include="Assets\setup.png" />
+	<Resource Include="Assets\stop.png" />
+	<Resource Include="Resources\App.ico" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Assets\exit.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="Assets\Resource1.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resource1.resx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Update="Assets\Resource1.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resource1.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+
+</Project>

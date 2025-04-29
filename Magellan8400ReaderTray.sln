@@ -1,0 +1,45 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.3.32811.315
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Magellan8400ReaderTray", "Source\Magellan8400ReaderTray.csproj", "{725EDD79-716A-4A5F-9C24-59EEA5E3C27A}"
+EndProject
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "Magellan8400ReaderTray", "Magellan8400ReaderTray\Magellan8400ReaderTray.vdproj", "{B3B4C649-F705-4695-87E9-5DC4214E0B1E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Debug|x64 = Debug|x64
+		Debug|x86 = Debug|x86
+		Release|Any CPU = Release|Any CPU
+		Release|x64 = Release|x64
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{725EDD79-716A-4A5F-9C24-59EEA5E3C27A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{725EDD79-716A-4A5F-9C24-59EEA5E3C27A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{725EDD79-716A-4A5F-9C24-59EEA5E3C27A}.Debug|x64.ActiveCfg = Debug|x64
+		{725EDD79-716A-4A5F-9C24-59EEA5E3C27A}.Debug|x64.Build.0 = Debug|x64
+		{725EDD79-716A-4A5F-9C24-59EEA5E3C27A}.Debug|x86.ActiveCfg = Debug|x86
+		{725EDD79-716A-4A5F-9C24-59EEA5E3C27A}.Debug|x86.Build.0 = Debug|x86
+		{725EDD79-716A-4A5F-9C24-59EEA5E3C27A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{725EDD79-716A-4A5F-9C24-59EEA5E3C27A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{725EDD79-716A-4A5F-9C24-59EEA5E3C27A}.Release|x64.ActiveCfg = Release|x64
+		{725EDD79-716A-4A5F-9C24-59EEA5E3C27A}.Release|x64.Build.0 = Release|x64
+		{725EDD79-716A-4A5F-9C24-59EEA5E3C27A}.Release|x86.ActiveCfg = Release|x86
+		{725EDD79-716A-4A5F-9C24-59EEA5E3C27A}.Release|x86.Build.0 = Release|x86
+		{B3B4C649-F705-4695-87E9-5DC4214E0B1E}.Debug|Any CPU.ActiveCfg = Debug
+		{B3B4C649-F705-4695-87E9-5DC4214E0B1E}.Debug|x64.ActiveCfg = Debug
+		{B3B4C649-F705-4695-87E9-5DC4214E0B1E}.Debug|x86.ActiveCfg = Debug
+		{B3B4C649-F705-4695-87E9-5DC4214E0B1E}.Release|Any CPU.ActiveCfg = Release
+		{B3B4C649-F705-4695-87E9-5DC4214E0B1E}.Release|x64.ActiveCfg = Release
+		{B3B4C649-F705-4695-87E9-5DC4214E0B1E}.Release|x86.ActiveCfg = Release
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {5A5BFEEE-7746-4801-8424-F965FA9ED677}
+	EndGlobalSection
+EndGlobal

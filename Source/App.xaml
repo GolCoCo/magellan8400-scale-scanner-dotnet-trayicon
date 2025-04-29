@@ -1,0 +1,9 @@
+﻿<Application x:Class="Magellan8400ReaderTray.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:syncfusion="http://schemas.syncfusion.com/wpf"
+             xmlns:local="clr-namespace:Magellan8400ReaderTray">
+    <Application.Resources>
+
+    </Application.Resources>
+</Application>

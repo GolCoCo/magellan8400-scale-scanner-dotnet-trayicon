@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <_LastSelectedProfileId>D:\%40WorkSpace\Projects\2024\12-11-excel2desktopapp\refer\pay-down-destroyer\PayDown\Properties\PublishProfiles\FolderProfile1.pubxml</_LastSelectedProfileId>
+  </PropertyGroup>
+  <ItemGroup>
+    <ApplicationDefinition Update="App.xaml">
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Update="SubViews\WinMessageBox.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Update="Assets\Resource1.resx">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Page Update="SubViews\WinMessageBox.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\Styles.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\WinSWMain.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="SubViews\WinMain.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="SubViews\WinScanner.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="SubViews\WinScale.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+  </ItemGroup>
+</Project>

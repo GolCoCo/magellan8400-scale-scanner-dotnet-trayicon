@@ -1,0 +1,91 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net6.0-windows</TargetFramework>
+    <Nullable>disable</Nullable>
+    <UseWPF>true</UseWPF>
+    <ApplicationIcon>App.ico</ApplicationIcon>
+    <ApplicationManifest>app.manifest</ApplicationManifest>
+	<IncludeAllContentForSelfExtract>true</IncludeAllContentForSelfExtract>
+    <Platforms>AnyCPU;x64</Platforms>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Assets\App.png" />
+    <None Remove="Assets\calculate.png" />
+    <None Remove="Assets\help.png" />
+    <None Remove="Assets\ok.png" />
+    <None Remove="Resources\App.png" />
+    <None Remove="Views\App.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="App.ico" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="DeviceId" Version="6.8.0" />
+    <PackageReference Include="FastMember" Version="1.5.0" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
+    <PackageReference Include="Standart.Hash.xxHash" Version="4.0.5" />
+    <PackageReference Include="Supabase" Version="1.1.1" />
+    <PackageReference Include="Syncfusion.Grid.WPF" Version="27.2.5" />
+    <PackageReference Include="Syncfusion.Licensing" Version="27.2.5" />
+    <PackageReference Include="Syncfusion.SfAccordion.WPF" Version="27.2.5" />
+    <PackageReference Include="Syncfusion.SfBusyIndicator.WPF" Version="27.2.5" />
+    <PackageReference Include="Syncfusion.SfChart.WPF" Version="27.2.5" />
+    <PackageReference Include="Syncfusion.SfGrid.WPF" Version="27.2.5" />
+    <PackageReference Include="Syncfusion.SfInput.WPF" Version="27.2.5" />
+    <PackageReference Include="Syncfusion.SfNavigationDrawer.WPF" Version="27.2.5" />
+    <PackageReference Include="Syncfusion.SfProgressBar.WPF" Version="27.2.5" />
+    <PackageReference Include="Syncfusion.SfSkinManager.WPF" Version="27.2.5" />
+    <PackageReference Include="Syncfusion.SfTextInputLayout.WPF" Version="27.2.5" />
+    <PackageReference Include="Syncfusion.SfTreeView.WPF" Version="27.2.5" />
+    <PackageReference Include="Syncfusion.Shared.WPF" Version="27.2.5" />
+    <PackageReference Include="Syncfusion.Themes.Office2019Black.WPF" Version="27.2.5" />
+    <PackageReference Include="Syncfusion.Themes.Material3Light.WPF" Version="27.2.5" />
+    <PackageReference Include="Syncfusion.Themes.Material3Light.WPF" Version="27.2.5" />
+    <PackageReference Include="Syncfusion.Themes.Material3Light.WPF" Version="27.2.5" />
+    <PackageReference Include="Syncfusion.Themes.Material3Light.WPF" Version="27.2.5" />
+    <PackageReference Include="Syncfusion.Tools.WPF" Version="27.2.5" />
+	<Resource Include="Assets/App.ico" />
+	<Resource Include="Assets\App.png" />
+	<Resource Include="Assets\calculate.png" />
+	<Resource Include="Assets\ok.png" />
+	<Resource Include="Resources\App.png" />
+	<Resource Include="Views\App.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="Assets\Resource1.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resource1.resx</DependentUpon>
+    </Compile>
+    <Compile Update="SubViews\WinAbout.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="SubViews\WinSavingBox.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Update="Assets\Resource1.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resource1.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Page Update="SubViews\WinAbout.xaml">
+      <XamlRuntime>$(DefaultXamlRuntime)</XamlRuntime>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="SubViews\WinSavingBox.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+  </ItemGroup>
+
+</Project>
