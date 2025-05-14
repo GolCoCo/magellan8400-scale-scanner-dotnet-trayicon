@@ -27,8 +27,8 @@
     WindowStartupLocation="CenterScreen"
     WindowState="Normal"
     Loaded="ChromelessWindow_Loaded"
-    Width="975"
-    Height="544"
+    Width="1000"
+    Height="280"
     ResizeMode="NoResize"
     ShowInTaskbar="True"
     StateChanged="ChromelessWindow_StateChanged"
@@ -103,7 +103,7 @@
                     <Grid>
                         <Grid.RowDefinitions>
                             <RowDefinition Height="108"/>
-                            <RowDefinition/>
+                            <RowDefinition Height="0"/>
                             <RowDefinition Height="24"/>
                         </Grid.RowDefinitions>
                         <GroupBox Header="SCANNER" BorderBrush="DarkGray" Margin="4,4,4,4" FontSize="12">
@@ -169,7 +169,7 @@
                                 </Grid>
                             </Grid>
                         </GroupBox>
-                        <GroupBox Grid.Row="1" x:Name="grpProcess" Header="PROCESS" BorderBrush="DarkGray" Margin="4,4,4,4" FontSize="12" >
+                        <GroupBox Grid.Row="1" x:Name="grpProcess" Header="PROCESS" BorderBrush="DarkGray" Margin="4,4,4,4" FontSize="12" Visibility="Hidden">
                             <ListBox x:Name="lbxLogs" Padding="4" Margin="4" FontSize="14" FontStyle="Normal" BorderThickness="1" BorderBrush="Gray"/>
                         </GroupBox>
                         <Border Grid.Row="2" BorderBrush="Gray" BorderThickness="1" Margin="4,0">
@@ -192,7 +192,7 @@
                     <Grid>
                         <Grid.RowDefinitions>
                             <RowDefinition Height="108"/>
-                            <RowDefinition/>
+                            <RowDefinition Height="0"/>
                             <RowDefinition Height="24"/>
                         </Grid.RowDefinitions>
                         <GroupBox Header="SCALE" BorderBrush="DarkGray" Margin="4,4,4,4" FontSize="12">

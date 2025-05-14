@@ -46,6 +46,8 @@ namespace Magellan8400ReaderTray.Views
 
             _Scanner = new ScannerController(lbxLogs);
             _Scale = new ScaleController(lbxScaleLogs);
+            tbxScaleOuputPath.Text = _settingMain._FolderPathScanner;
+            tbxOuputPath.Text = _settingMain._FolderPathScale;
         }
 
         private void ChromelessWindow_Loaded(object sender, RoutedEventArgs e)
@@ -95,7 +97,8 @@ namespace Magellan8400ReaderTray.Views
         private void btnStart_Click(object sender, RoutedEventArgs e)
         {
             bool ret = _Scanner.Start();
-            if (ret) {
+            if (ret)
+            {
                 tbxConneted.Background = Brushes.DarkGreen;
                 tbxConneted.Text = "Connected";
                 btnStart.IsEnabled = false;
@@ -107,19 +110,20 @@ namespace Magellan8400ReaderTray.Views
                 tbxConneted.Text = "Disconnect";
                 btnStart.IsEnabled = true;
                 btnStop.IsEnabled = false;
-                _Scanner = null;
+
             }
         }
 
         private void btnStop_Click(object sender, RoutedEventArgs e)
         {
             bool ret = _Scanner.Stop();
-            if (ret) {
+            if (ret)
+            {
                 tbxConneted.Background = Brushes.DarkRed;
                 tbxConneted.Text = "Disconnect";
                 btnStart.IsEnabled = true;
                 btnStop.IsEnabled = false;
-                _Scanner = null;
+
             }
             else
             {
@@ -127,18 +131,21 @@ namespace Magellan8400ReaderTray.Views
                 tbxConneted.Text = "Disconnect";
                 btnStart.IsEnabled = true;
                 btnStop.IsEnabled = false;
-                _Scanner = null;
+  
             }
-        }
-
-        private void btnOutputText_Click(object sender, RoutedEventArgs e)
-        {
-
         }
 
         private void btnOuputPath_Click(object sender, RoutedEventArgs e)
         {
+            FolderBrowserDialog folderDialog = new FolderBrowserDialog();
 
+            // If the user selects a folder (not canceled), print the selected folder path
+            if (folderDialog.ShowDialog() == System.Windows.Forms.DialogResult.OK)
+            {
+                _settingMain._FolderPathScale = folderDialog.SelectedPath;
+                tbxOuputPath.Text = _settingMain._FolderPathScale;
+                _settingMain.Save();
+            }
         }
 
         private void btnScaleStart_Click(object sender, RoutedEventArgs e)
@@ -157,7 +164,6 @@ namespace Magellan8400ReaderTray.Views
                 tbxScaleConneted.Text = "Disconnect";
                 btnScaleStart.IsEnabled = true;
                 btnScaleStop.IsEnabled = false;
-                _Scale = null;
             }
         }
 
@@ -170,7 +176,7 @@ namespace Magellan8400ReaderTray.Views
                 tbxScaleConneted.Text = "Disconnect";
                 btnScaleStart.IsEnabled = true;
                 btnScaleStop.IsEnabled = false;
-                _Scale = null;
+
             }
             else
             {
@@ -178,19 +184,7 @@ namespace Magellan8400ReaderTray.Views
                 tbxScaleConneted.Text = "Disconnect";
                 btnScaleStart.IsEnabled = true;
                 btnScaleStop.IsEnabled = false;
-                _Scale = null;
-            }
-        }
 
-        private void btnScaleOutputText_Click(object sender, RoutedEventArgs e)
-        {
-            FolderBrowserDialog folderDialog = new FolderBrowserDialog();
-
-            // If the user selects a folder (not canceled), print the selected folder path
-            if (folderDialog.ShowDialog() == System.Windows.Forms.DialogResult.OK)
-            {
-                _settingMain._FolderPathScale = folderDialog.SelectedPath;
-                tbxOuputPath.Text = _settingMain._FolderPathScale;
             }
         }
 
@@ -202,7 +196,8 @@ namespace Magellan8400ReaderTray.Views
             if (folderDialog.ShowDialog() == System.Windows.Forms.DialogResult.OK)
             {
                 _settingMain._FolderPathScanner = folderDialog.SelectedPath;
-                tbxOuputPath.Text = _settingMain._FolderPathScale;
+                tbxScaleOuputPath.Text = _settingMain._FolderPathScale;
+                _settingMain.Save();
             }
         }
     }

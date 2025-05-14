@@ -20,7 +20,8 @@ namespace Magellan8400ReaderTray.Controllers
         private List<List<string>> _Data;
         private string _DeviceName = "MagellanSC";
         private ListBox _listBox;
-        public ScannerController(ListBox listBox) {
+        public ScannerController(ListBox listBox)
+        {
             this._Data = new List<List<string>>();
             _settingMain = SettingMain.Load<SettingMain>();
             if (_settingMain == null)
@@ -123,7 +124,7 @@ namespace Magellan8400ReaderTray.Controllers
                         writer.WriteLine($"{item[0]},{item[1]}");
                     }
                 }
-                UtilMethods.ShowMessageBox($"Successful Data Saved. \n{filePath}");
+
             }
             catch (Exception ex)
             {
@@ -133,9 +134,10 @@ namespace Magellan8400ReaderTray.Controllers
 
         private void AppendLog(string data)
         {
-            _listBox.Items.Add(data);
+            //_listBox.Items.Add(data);
             string csdt = DateTime.Now.ToString("yyyy/MM/dd HH:mm:ss");
             _Data.Add(new List<string> { csdt, data });
         }
     }
 }
+0.44

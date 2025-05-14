@@ -22,7 +22,8 @@ namespace Magellan8400ReaderTray.Controllers
         private string _DeviceName = "MagellanSC";
         private ListBox _listBox;
 
-        public ScaleController(ListBox listBox) {
+        public ScaleController(ListBox listBox)
+        {
             this._Data = new List<List<string>>();
             _settingMain = SettingMain.Load<SettingMain>();
             if (_settingMain == null)
@@ -30,6 +31,7 @@ namespace Magellan8400ReaderTray.Controllers
                 _settingMain = new SettingMain();
             }
             _listBox = listBox;
+            _OposScale = new OPOSScaleClass();
         }
 
         public bool Start()
@@ -132,6 +134,7 @@ namespace Magellan8400ReaderTray.Controllers
             if (value == (int)OPOSScaleConstants.SCAL_SUE_STABLE_WEIGHT)
             {
                 data = WeightFormat(_OposScale.ScaleLiveWeight);
+                CopyAndPasteForString.PasteToFocusedApp(data);
             }
             else if (value == (int)OPOSScaleConstants.SCAL_SUE_WEIGHT_UNSTABLE)
             {
@@ -140,6 +143,7 @@ namespace Magellan8400ReaderTray.Controllers
             else if (value == (int)OPOSScaleConstants.SCAL_SUE_WEIGHT_ZERO)
             {
                 data = WeightFormat(_OposScale.ScaleLiveWeight);
+                CopyAndPasteForString.PasteToFocusedApp(data);
             }
             else if (value == (int)OPOSScaleConstants.SCAL_SUE_WEIGHT_OVERWEIGHT)
             {
@@ -157,7 +161,6 @@ namespace Magellan8400ReaderTray.Controllers
             {
                 data = $"-> Unknown status {value}";
             }
-            CopyAndPasteForString.PasteToFocusedApp(data);
             AppendLog(data);
             OutputText();
         }
@@ -185,7 +188,7 @@ namespace Magellan8400ReaderTray.Controllers
 
         private void AppendLog(string data)
         {
-            _listBox.Items.Add(data);
+            //_listBox.Items.Add(data);
         }
 
     }
